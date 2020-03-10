@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import './style.css';
+import Carousel from 'react-images';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const images = [{ source: 'photos/camping.jpg' }, { source: 'photos/castle.jpg' }, { source: 'photos/field.jpg' }];
+
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Carousel views={images} />
+      </div>
+    );
+  }
 }
+
+
 
 export default App;
