@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import './style.css';
-import Carousel from 'react-images';
 
-const images = [{ source: 'photos/camping.jpg' }, { source: 'photos/castle.jpg' }, { source: 'photos/field.jpg' }];
-
+import StartPage from './components/StartPage/StartPage'
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Carousel views={images} />
-      </div>
+      <StartPage/>
     );
   }
 }
-
-
 
 export default App;
