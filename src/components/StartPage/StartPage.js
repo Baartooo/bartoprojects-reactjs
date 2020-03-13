@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './StartPage.css';
-import backgroundImage from '../../photos/plane-mountains.jpg'
+import backgroundImage from '../../photos/startPageBackground.jpg'
 
 
 class StartPage extends Component {
@@ -11,7 +11,7 @@ class StartPage extends Component {
                 <img
                     className='background-image'
                     src={backgroundImage}
-                    alt='plane-mountains'
+                    alt='background'
                 />
             </main>
         );

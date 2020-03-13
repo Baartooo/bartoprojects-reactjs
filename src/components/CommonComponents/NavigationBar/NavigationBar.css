@@ -1,10 +1,11 @@
 .navbar{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     font-weight: 700;
     height: 56px;
+    z-index: 200;
 }
 .navbar-logo a{
     font-weight: 900;

@@ -4,6 +4,8 @@ import './App.css';
 import StartPage from './components/StartPage/StartPage'
 import NavigationBar from './components/CommonComponents/NavigationBar/NavigationBar';
 import DropdownNav from './components/CommonComponents/DropdownNav/DropdownNav';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Album from './components/AlbumPage/Album';
 
 
 class App extends Component {
@@ -19,11 +21,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className='app'>
-        <NavigationBar dropdownClickHandler={this.dropdownToggleClickHandler}/>
-        <DropdownNav isOpened={this.state.isDropdownOpened}/>
-        <StartPage />
-      </div>
+      <Router>
+        <div className='app'>
+          <NavigationBar dropdownClickHandler={this.dropdownToggleClickHandler} />
+          <DropdownNav isOpened={this.state.isDropdownOpened} />
+          <Switch>
+            <Route path='/' exact component={StartPage}/>
+            <Route path='/outdoor' exact component={Album}/>
+            <Route path='/urban' exact component={Album}/>
+            <Route path='/people' exact component={StartPage}/>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

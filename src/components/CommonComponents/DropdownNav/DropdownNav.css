@@ -27,3 +27,8 @@
     color: #202020;
     transition: 300ms;
 }
+@media(min-width:691px){
+    .dropdown-navigation.opened{
+        transform: translateY(-130%);
+    }
+}
