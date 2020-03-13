@@ -5,6 +5,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import DropdownToggleButton from '../DropdownNav/DropdownToggleButton';
 
 import './NavigationBar.css';
 
@@ -37,7 +38,9 @@ class NavigationBar extends Component {
                                 </Route>
                             </Switch>
                         </div>
-                        <div id='hamburger-icon'></div>
+                        <div>
+                            <DropdownToggleButton click={this.props.dropdownClickHandler}/>
+                        </div>
                     </nav>
                 </Router>
             </header>

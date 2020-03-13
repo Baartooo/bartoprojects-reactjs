@@ -1,0 +1,13 @@
+/* 1.4rem */
+.toggle-button {
+    height: 1.4rem;
+    font-size: 1.4rem;
+    background: transparent;
+    color: white;
+    margin-right: 3rem;
+    border: none;
+    cursor: pointer;
+}
+.toggle-button:focus{
+    outline: none;
+}

@@ -8,6 +8,7 @@
 }
 .navbar-logo a{
     font-weight: 900;
+    white-space: nowrap;
     text-decoration: none;
     color: white;
     font-size: 1.4rem;
@@ -41,4 +42,5 @@
 .navbar-navigation-items a:hover,
 .navbar-navigation-items a:active{
     color: #202020;
+    transition: 300ms;
 }
