@@ -10,13 +10,18 @@ import './DropdownNav.css';
 
 
 class DropdownNav extends Component {
+
     render() {
+        let dropdownClassName = 'dropdown-navigation';
+        if (this.props.isOpened) {
+            dropdownClassName='dropdown-navigation opened'
+        }
         return (
-            <div>
+            <header>
                 <Router>
-                    <nav className='dropdown-navigation'>
+                    <nav className={dropdownClassName}>
                         <ul>
-                            <li><Link to='/'>start.</Link></li>
+                            <li className=''><Link to='/'>start.</Link></li>
                             <li><Link to='/'>outdoor.</Link></li>
                             <li><Link to='/'>urban.</Link></li>
                             <li><Link to='/'>people.</Link></li>
@@ -24,7 +29,7 @@ class DropdownNav extends Component {
                             <li><Link to='/'>about.</Link></li>
                         </ul>
                     </nav>
-                    
+
                     <Switch>
                         <Route path="/">
                             {/* <About /> */}
@@ -37,7 +42,7 @@ class DropdownNav extends Component {
                         </Route>
                     </Switch>
                 </Router>
-            </div>
+            </header>
         );
     }
 }

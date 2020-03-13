@@ -44,3 +44,23 @@
     color: #202020;
     transition: 300ms;
 }
+.dropDownToggleButtonDiv{
+    display: none;
+}
+@media(max-width: 690px){
+    .navbar-navigation-items{
+        display: none;
+    }
+    .dropDownToggleButtonDiv{
+        display: flex;
+        margin-right: 3rem;
+    }
+}
+@media(max-width: 360px){
+    .navbar-logo a{
+        margin-left: 1rem;
+    }
+    .dropDownToggleButtonDiv{
+        margin-right: 1rem;
+    }
+}

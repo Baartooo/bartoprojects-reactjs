@@ -18,15 +18,10 @@ class App extends Component {
   };
 
   render() {
-    let dropdownNavigation;
-
-    if (this.state.isDropdownOpened) {
-      dropdownNavigation = <DropdownNav />;
-    }
     return (
       <div className='app'>
         <NavigationBar dropdownClickHandler={this.dropdownToggleClickHandler}/>
-        {dropdownNavigation};
+        <DropdownNav isOpened={this.state.isDropdownOpened}/>
         <StartPage />
       </div>
     );

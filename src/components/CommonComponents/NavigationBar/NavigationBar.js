@@ -38,7 +38,7 @@ class NavigationBar extends Component {
                                 </Route>
                             </Switch>
                         </div>
-                        <div>
+                        <div className='dropDownToggleButtonDiv'>
                             <DropdownToggleButton click={this.props.dropdownClickHandler}/>
                         </div>
                     </nav>
