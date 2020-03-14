@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
 
+import Lightbox from '../Lightbox/Lightbox';
+
 import './Outdoor.css';
 import CampingPhoto from '../../../photos/outdoor/camping.jpg';
-// import CastlePhoto from '../../../photos/outdoor/castle.jpg';
-// import MountainsPhoto from '../../../photos/outdoor/mountains.jpg';
-// import FieldPhoto from '../../../photos/outdoor/field.jpg';
-// import PlaneViewPhoto from '../../../photos/outdoor/planeView.jpg';
-// import StormPhoto from '../../../photos/outdoor/storm1.JPG';
+import LonelyTreePhoto from '../../../photos/outdoor/lonelyTree.jpg';
+import CastlePhoto from '../../../photos/outdoor/castle.jpg';
+import FieldPhoto from '../../../photos/outdoor/field.jpg';
+import ChurchPhoto from '../../../photos/outdoor/fallChurch.jpg';
+import RoadPhoto from '../../../photos/outdoor/fallRoad.jpg';
 
 class Outdoor extends Component {
-    
-    
-    render() {
-        const images = [CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto];
 
+    state = {
+        isLightboxOpened: false,
+        currentLightboxImage: undefined,
+        images: [ChurchPhoto, RoadPhoto, FieldPhoto, CampingPhoto, LonelyTreePhoto, CastlePhoto]
+    };
+
+    openLightbox = (index) => {
+        this.setState({
+            currentLightboxImage: index,
+            isLightboxOpened: true
+        })
+    }
+
+    closeLightbox = () => {
+        this.setState({
+            isLightboxOpened: false,
+            currentImage: undefined
+        })
+    }
+
+
+    render() {
+        let lightbox;
+        if (this.state.isLightboxOpened) {
+            lightbox = <Lightbox isOpened={this.state.isLightboxOpened} currentImage={this.state.currentLightboxImage} />
+        }
         return (
             <>
+                {lightbox}
                 <div className='album-header'>Outdoor photos done by Bartosz Gajos &copy;</div>
                 <div className='photos'>
-                    {images.map((photo, index) => (
-                        <div key={index} className='single-photo'>
+                    {this.state.images.map((photo, index) => (
+                        <div key={index} className='single-photo' onClick={() => this.openLightbox(index)}>
                             <img src={photo} className='single-img' alt=''></img>
                         </div>
                     ))}

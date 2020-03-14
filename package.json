@@ -11,7 +11,9 @@
     "react-images": "^1.1.0-beta.3",
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "react-scripts start",
