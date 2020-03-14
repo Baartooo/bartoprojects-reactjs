@@ -6,9 +6,6 @@ import Logo from '../../../photos/logo.png';
 import './NavigationBar.css';
 
 class NavigationBar extends Component {
-    state = {
-        activePage: ''
-    }
     render() {
 
         return (
