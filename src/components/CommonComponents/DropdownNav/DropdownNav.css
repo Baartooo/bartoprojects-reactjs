@@ -27,6 +27,9 @@
     color: #202020;
     transition: 300ms;
 }
+.dropdown-navigation ul li a.active-nagivation-link{
+    color: #202020;
+}
 @media(min-width:691px){
     .dropdown-navigation.opened{
         transform: translateY(-130%);

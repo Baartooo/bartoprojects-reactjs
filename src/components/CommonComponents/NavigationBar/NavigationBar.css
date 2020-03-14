@@ -4,16 +4,22 @@
     top: 0;
     left: 0;
     font-weight: 700;
-    height: 56px;
+    height: 65px;
     z-index: 200;
 }
 .navbar-logo a{
+    width: 150px;
+    display: flex;
     font-weight: 900;
     white-space: nowrap;
     text-decoration: none;
     color: white;
     font-size: 1.4rem;
     margin-left: 3rem;
+}
+.navbar-logo-img{
+    width: 100%;
+    height: auto;
 }
 .navbar-spacer{
     flex: 1;
@@ -40,10 +46,12 @@
 .navbar-navigation-items li{
     margin-left: 1.4rem;
 }
-.navbar-navigation-items a:hover,
-.navbar-navigation-items a:active{
+.navbar-navigation-items a:hover{
     color: #202020;
     transition: 300ms;
+}
+.navbar-navigation-items ul li a.active-navigation-link{
+    color: #202020;
 }
 .dropDownToggleButtonDiv{
     display: none;

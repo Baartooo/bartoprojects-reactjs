@@ -10,6 +10,7 @@ import CampingPhoto from '../../../photos/outdoor/camping.jpg';
 
 class Outdoor extends Component {
     
+    
     render() {
         const images = [CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto, CampingPhoto];
 
@@ -17,8 +18,8 @@ class Outdoor extends Component {
             <>
                 <div className='album-header'>Outdoor photos done by Bartosz Gajos &copy;</div>
                 <div className='photos'>
-                    {images.map(photo => (
-                        <div className='single-photo'>
+                    {images.map((photo, index) => (
+                        <div key={index} className='single-photo'>
                             <img src={photo} className='single-img' alt=''></img>
                         </div>
                     ))}
