@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Lightbox from '../Lightbox/Lightbox';
+import { connect } from 'react-redux';
 
 import './Outdoor.css';
 import CampingPhoto from '../../../photos/outdoor/camping.jpg';
@@ -54,4 +55,8 @@ class Outdoor extends Component {
     }
 }
 
-export default Outdoor;
+const mapStateToProps = state => ({
+    isLightboxOpened: state.lightbox.isLightboxOpened
+})
+
+export default connect(mapStateToProps, {}) (Outdoor);

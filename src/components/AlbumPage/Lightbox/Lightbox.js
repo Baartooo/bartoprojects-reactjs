@@ -1,41 +1,30 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 import './Lightbox.css';
 
 class Lightbox extends Component {
-
-    state = {
-        currentImage: this.props.currentImage,
-        isOpened: this.props.isOpened
-    }
-
-    openLightbox = () => {
-        this.setState({
-            isOpened: true
-        })
-    }
-    closeLightbox = () => {
-        this.setState({
-            isOpened: false
-        })
-    }
     render() {
         let lightboxWrapperClassName = 'lightbox-wrapper';
 
-        if (this.state.isOpened) {
+        if (this.props.isLightboxOpened) {
             lightboxWrapperClassName = 'lightbox-wrapper opened';
         }
 
         return (
             <div className={lightboxWrapperClassName}>
 
-                <div className='lightbox-background' onClick={this.closeLightbox} />
+                <div className='lightbox-background' />
                 <div className='lightbox-photo-wrapper'>
-                    <img src={this.state.currentImage} alt='dsada' className='lightbox-photo' />
+                    <img src={''} alt='dsada' className='lightbox-photo' />
                 </div>
             </div>
         );
     }
 }
+ 
+const mapStateToProps = state => ({
+    isLightboxOpened: state.lightbox.isLightboxOpened
+})
 
-export default Lightbox;
+export default connect(mapStateToProps, {})(Lightbox);
