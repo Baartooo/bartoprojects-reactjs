@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
 import './App.css';
 import StartPage from './components/StartPage/StartPage'
 import NavigationBar from './components/CommonComponents/NavigationBar/NavigationBar';
 import DropdownNav from './components/CommonComponents/DropdownNav/DropdownNav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Album from './components/AlbumPage/Album';
+import rootReducer from './reducers';
+import { lightboxActions } from './redux/lightbox/duck';
 
-
-const initialLightboxState = {
-  isLightboxOpened: false
-}
-function lightbox(state = initialLightboxState, action) {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
-const store = createStore(lightbox, composeWithDevTools());
+const store = createStore(rootReducer, composeWithDevTools());
 window.store = store;
-
 
 
 
