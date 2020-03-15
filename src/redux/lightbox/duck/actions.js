@@ -6,8 +6,18 @@ const openLightbox = () => ({
 const closeLightbox = () => ({
     type: types.CLOSE_LIGHTBOX
 });
+const setCurrentImagesArray=(currentArray)=>({
+    type: types.SET_CURR_IMG_ARRAY,
+    currentArray
+});
+const setCurrentImage=(currentImage)=>({
+    type: types.SET_CURR_IMG,
+    currentImage
+})
 
 export default {
     openLightbox,
-    closeLightbox
+    closeLightbox,
+    setCurrentImagesArray,
+    setCurrentImage
 }
