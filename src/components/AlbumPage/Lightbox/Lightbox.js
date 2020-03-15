@@ -17,7 +17,6 @@ class Lightbox extends Component {
     render() {
         let lightboxWrapperClassName = 'lightbox-wrapper';
         let currentImageIndex = this.props.currentImageArray.indexOf(this.props.currentImage);
-        console.log(this.props)
 
         if (this.props.isLightboxOpened) {
             lightboxWrapperClassName = 'lightbox-wrapper opened';
