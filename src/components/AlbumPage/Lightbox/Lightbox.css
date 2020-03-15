@@ -20,18 +20,22 @@
     left: 0;
     z-index: 350;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.95;
 }
 .lightbox-photo-wrapper{
-    width: 750px;
-    height: 500px;
+    width: 60%;
+    height: 0;
+    padding-top: 39.996%;
     background: black;
     border-radius: 5px;
     border: solid 2px rgb(206, 206, 206);
-    position: absolute;
+    position: relative;
     z-index: 400;
 }
 .lightbox-photo{
     width: 100%;
     height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }

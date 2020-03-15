@@ -2,8 +2,10 @@ import types from './types';
 
 const INITIAL_LIGHTBOX_STATE = {
     isLightboxOpened: false,
-    currentImageArray: ["/static/media/fallChurch.97c0cbea.jpg", "/static/media/fallRoad.5f34838d.jpg", "/static/media/field.652f058e.jpg", "/static/media/camping.3a2720ff.jpg", "/static/media/lonelyTree.6c8512f2.jpg", "/static/media/castle.da1f4614.jpg"],
-    currentImage: '/static/media/fallRoad.5f34838d.jpg'
+    currentImageArray: undefined,
+    currentImage: undefined,
+    isOnFirst: false,
+    isOnLast: false
 }
 
 const lightboxReducer = (state = INITIAL_LIGHTBOX_STATE, action) => {
@@ -16,7 +18,9 @@ const lightboxReducer = (state = INITIAL_LIGHTBOX_STATE, action) => {
         case types.CLOSE_LIGHTBOX:
             return {
                 ...state,
-                isLightboxOpened: false
+                isLightboxOpened: false,
+                currentImageArray: undefined,
+                currentImage: undefined
             }
         case types.SET_CURR_IMG_ARRAY:
             return {
@@ -27,6 +31,32 @@ const lightboxReducer = (state = INITIAL_LIGHTBOX_STATE, action) => {
             return {
                 ...state,
                 currentImage: action.currentImage
+            }
+        case types.ALLOW_NEXT:
+            return {
+                ...state,
+                isOnLast: false
+            }
+        case types.DENY_NEXT:
+            return {
+                ...state,
+                isOnLast: true
+            }
+        case types.ALLOW_PREV:
+            return {
+                ...state,
+                isOnFirst: false
+            }
+        case types.DENY_PREV:
+            return {
+                ...state,
+                isOnFirst: true
+            }
+        case types.RESET_INDEX:
+            return {
+                ...state,
+                isOnFirst: false,
+                isOnLast: false
             }
         default:
             return state;

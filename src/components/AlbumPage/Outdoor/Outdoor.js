@@ -20,6 +20,17 @@ class Outdoor extends Component {
         this.props.openLightbox();
         this.props.setCurrentImagesArray(images);
         this.props.setCurrentImage(images[index]);
+        if (index === images.length - 1) {
+            this.props.denyNext();
+        } else {
+            this.props.allowNext();
+        }
+        if (index === 0) {
+            this.props.denyPrev();
+        } else {
+            this.props.allowPrev();
+        }
+
     }
 
     render() {
@@ -45,7 +56,12 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     openLightbox: () => dispatch(actions.openLightbox()),
     setCurrentImagesArray: (array) => dispatch(actions.setCurrentImagesArray(array)),
-    setCurrentImage: (image) => dispatch(actions.setCurrentImage(image))
+    setCurrentImage: (image) => dispatch(actions.setCurrentImage(image)),
+    allowNext: () => dispatch(actions.allowNext()),
+    denyNext: () => dispatch(actions.denyNext()),
+    allowPrev: () => dispatch(actions.allowPrev()),
+    denyPrev: () => dispatch(actions.denyPrev()),
+    resetIndex: () => dispatch(actions.resetIndex())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Outdoor);

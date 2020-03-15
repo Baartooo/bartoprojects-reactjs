@@ -1,0 +1,33 @@
+button{
+    color: white;
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 450;
+}
+.arrow{
+    font-size: 1.8rem;
+    opacity: .4;
+    height: 60vh;
+    width: 50%;
+    display: flex;
+}
+.arrow.left{
+    left: 0;
+    justify-content: flex-start;
+}
+.arrow.right{
+    right: 0;
+    justify-content: flex-end;
+}
+.arrow svg{
+    cursor: pointer;
+}
+.close-x{
+    right: 0;
+    top: 0;
+    font-size: 3rem;
+    opacity: .8;
+    cursor: pointer;
+}
