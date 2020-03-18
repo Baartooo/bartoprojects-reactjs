@@ -1,36 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import './Buttons.css'
 
-class LeftArrow extends Component {
-    render() {
-        return (
-            <button className='arrow left' onClick={this.props.onClick}>
-                <FaArrowLeft />
-            </button>
-        )
-    }
+const LeftArrow = (props) => {
+    return (
+        <button className='arrow left' onClick={props.onClick}>
+            <FaArrowLeft />
+        </button>
+    )
 }
 
-class RightArrow extends Component {
-    render() {
-        return (
-            <button className='arrow right' onClick={this.props.onClick}>
-                <FaArrowRight />
-            </button>
-        )
-    }
+const RightArrow = (props) => {
+    return (
+        <button className='arrow right' onClick={props.onClick}>
+            <FaArrowRight />
+        </button>
+    )
 }
 
-class CloseX extends Component {
-    render() {
-        return (
-            <button className='close-x' onClick={this.props.onClick}>
-                <IoIosClose />
-            </button>
-        )
-    }
+const CloseX = (props) => {
+    return (
+        <button className='close-x' onClick={props.onClick}>
+            <IoIosClose />
+        </button>
+    )
 }
 
 export {

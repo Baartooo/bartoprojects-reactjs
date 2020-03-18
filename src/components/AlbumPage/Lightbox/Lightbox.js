@@ -1,26 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import actions from '../../../redux/lightbox/duck/actions';
 import './Lightbox.css';
 import { LeftArrow, RightArrow, CloseX } from './Buttons/Buttons';
 
+const Lightbox = (props) => {
 
-import CampingPhoto from '../../../photos/outdoor/camping.jpg';
-import LonelyTreePhoto from '../../../photos/outdoor/lonelyTree.jpg';
-import CastlePhoto from '../../../photos/outdoor/castle.jpg';
-import FieldPhoto from '../../../photos/outdoor/field.jpg';
-import ChurchPhoto from '../../../photos/outdoor/fallChurch.jpg';
-import RoadPhoto from '../../../photos/outdoor/fallRoad.jpg';
-
-
-class Lightbox extends Component {
-
-    closeLightboxAndResetIndex = () => {
-        this.props.closeLightbox();
-        this.props.resetIndex();
+    const closeLightboxAndResetIndex = () => {
+        props.closeLightbox();
+        props.resetIndex();
     }
-    moveRight = () => {
-        const { setCurrentImage, currentImageArray, currentImage, isOnLast, denyNext, allowPrev } = this.props;
+    const moveRight = () => {
+        const { setCurrentImage, currentImageArray, currentImage, isOnLast, denyNext, allowPrev } = props;
         if (!isOnLast) {
             if (currentImageArray.indexOf(currentImage) + 1 === currentImageArray.length - 1) {
                 denyNext();
@@ -31,8 +22,8 @@ class Lightbox extends Component {
             setCurrentImage(currentImageArray[currentImageArray.indexOf(currentImage) + 1]);
         }
     }
-    moveLeft = () => {
-        const { setCurrentImage, currentImageArray, currentImage, isOnFirst, allowNext, denyPrev } = this.props;
+    const moveLeft = () => {
+        const { setCurrentImage, currentImageArray, currentImage, isOnFirst, allowNext, denyPrev } = props;
         if (!isOnFirst) {
             if (currentImageArray.indexOf(currentImage) - 1 === 0) {
                 denyPrev();
@@ -44,34 +35,33 @@ class Lightbox extends Component {
         }
     }
 
-    render() {
-        let lightboxWrapperClassName = 'lightbox-wrapper';
+    let lightboxWrapperClassName = 'lightbox-wrapper';
 
-        if (this.props.isLightboxOpened) {
-            lightboxWrapperClassName = 'lightbox-wrapper opened';
-        }
-        let leftArrow, rightArrow;
-
-        if (!this.props.isOnFirst) {
-            leftArrow = <LeftArrow onClick={this.moveLeft} />
-        }
-        if (!this.props.isOnLast) {
-            rightArrow = <RightArrow onClick={this.moveRight} />
-        }
-
-        return (
-            <div className={lightboxWrapperClassName}>
-
-                <div className='lightbox-background' onClick={this.closeLightboxAndResetIndex} />
-                <CloseX onClick={this.closeLightboxAndResetIndex} />
-                {leftArrow}
-                {rightArrow}
-                <div className='lightbox-photo-wrapper'>
-                    <img src={this.props.currentImage} alt='img' className='lightbox-photo' />
-                </div>
-            </div>
-        );
+    if (props.isLightboxOpened) {
+        lightboxWrapperClassName = 'lightbox-wrapper opened';
     }
+    let leftArrow, rightArrow;
+
+    if (!props.isOnFirst) {
+        leftArrow = <LeftArrow onClick={moveLeft} />
+    }
+    if (!props.isOnLast) {
+        rightArrow = <RightArrow onClick={moveRight} />
+    }
+
+    return (
+        <div className={lightboxWrapperClassName}>
+
+            <div className='lightbox-background' onClick={closeLightboxAndResetIndex} />
+            <CloseX onClick={closeLightboxAndResetIndex} />
+            {leftArrow}
+            {rightArrow}
+            <div className='lightbox-photo-wrapper'>
+                <img src={props.currentImage} alt='img' className='lightbox-photo' />
+            </div>
+        </div>
+    );
+
 }
 const mapStateToProps = state => ({
     isLightboxOpened: state.lightbox.isLightboxOpened,

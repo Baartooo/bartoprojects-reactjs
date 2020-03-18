@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Lightbox from '../Lightbox/Lightbox';
 import { connect } from 'react-redux';
@@ -14,40 +14,37 @@ import RoadPhoto from '../../../photos/outdoor/fallRoad.jpg';
 
 const images = [ChurchPhoto, RoadPhoto, FieldPhoto, CampingPhoto, LonelyTreePhoto, CastlePhoto];
 
-class Outdoor extends Component {
+const Outdoor = (props) => {
 
-    openLightbox = (index) => {
-        this.props.openLightbox();
-        this.props.setCurrentImagesArray(images);
-        this.props.setCurrentImage(images[index]);
+    const openLightbox = (index) => {
+        props.openLightbox();
+        props.setCurrentImagesArray(images);
+        props.setCurrentImage(images[index]);
         if (index === images.length - 1) {
-            this.props.denyNext();
+            props.denyNext();
         } else {
-            this.props.allowNext();
+            props.allowNext();
         }
         if (index === 0) {
-            this.props.denyPrev();
+            props.denyPrev();
         } else {
-            this.props.allowPrev();
+            props.allowPrev();
         }
 
     }
-
-    render() {
-        return (
-            <>
-                <Lightbox />
-                <div className='album-header'>Outdoor photos done by Bartosz Gajos &copy;</div>
-                <div className='photos'>
-                    {images.map((photo, index) => (
-                        <div key={index} className='single-photo' onClick={() => this.openLightbox(index)}>
-                            <img src={photo} className='single-img' alt=''></img>
-                        </div>
-                    ))}
-                </div>
-            </>
-        );
-    }
+    return (
+        <>
+            <Lightbox />
+            <div className='album-header'>Outdoor photos done by Bartosz Gajos &copy;</div>
+            <div className='photos'>
+                {images.map((photo, index) => (
+                    <div key={index} className='single-photo' onClick={() => openLightbox(index)}>
+                        <img src={photo} className='single-img' alt=''></img>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 }
 
 const mapStateToProps = state => ({
