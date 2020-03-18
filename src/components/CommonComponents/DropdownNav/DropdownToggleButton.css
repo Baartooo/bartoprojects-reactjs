@@ -1,4 +1,5 @@
 .toggle-button {
+    display: flex;
     height: 1.4rem;
     font-size: 1.4rem;
     background: transparent;
