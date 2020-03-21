@@ -17,9 +17,9 @@ const images = [ChurchPhoto, RoadPhoto, FieldPhoto, CampingPhoto, LonelyTreePhot
 const Outdoor = (props) => {
 
     const openLightbox = (index) => {
-        props.openLightbox();
         props.setCurrentImagesArray(images);
         props.setCurrentImage(images[index]);
+        props.openLightbox();
         if (index === images.length - 1) {
             props.denyNext();
         } else {

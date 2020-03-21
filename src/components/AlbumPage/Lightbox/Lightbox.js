@@ -40,6 +40,7 @@ const Lightbox = (props) => {
     if (props.isLightboxOpened) {
         lightboxWrapperClassName = 'lightbox-wrapper opened';
     }
+
     let leftArrow, rightArrow;
 
     if (!props.isOnFirst) {
