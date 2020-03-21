@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Outdoor.css';
+import './People.css';
 import CampingPhoto from '../../../photos/outdoor/camping.jpg';
 import LonelyTreePhoto from '../../../photos/outdoor/lonelyTree.jpg';
 import CastlePhoto from '../../../photos/outdoor/castle.jpg';
@@ -14,8 +14,7 @@ const images = [ChurchPhoto, RoadPhoto, FieldPhoto, CampingPhoto, LonelyTreePhot
 const Outdoor = (props) => {
     return (
         <main className='album-wrapper'>
-
-            
+            <h1>People</h1>
             <Album images={images}/>
 
 
