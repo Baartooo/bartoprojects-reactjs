@@ -13,7 +13,7 @@
 }
 .single-photo{
     width: 30%;
-    margin: 0 .75rem .75rem .75rem;
+    margin: 0 1% 2% 1%;
 }
 .single-img{
     width: 100%;
@@ -21,9 +21,7 @@
     cursor: pointer;
 }
 @media(max-width: 768px){
-    .single-photo{
-        margin: 0 .5rem .5rem .5rem;
-    }
+
 }
 @media(max-width: 576px){
     .single-photo{

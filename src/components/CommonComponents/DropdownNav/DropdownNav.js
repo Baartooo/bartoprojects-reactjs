@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-
 import './DropdownNav.css';
+import routes from '../../../router/routes';
 
 
 const DropdownNav = (props) => {
@@ -14,12 +14,12 @@ const DropdownNav = (props) => {
         <header>
             <nav className={dropdownClassName}>
                 <ul>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/'>start.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/outdoor'>outdoor.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/urban'>urban.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/people'>people.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/analog'>analog.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to='/about'>about.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.start}>start.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.outdoor}>outdoor.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.urban}>urban.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.people}>people.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.analog}>analog.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.about}>about.</NavLink></li>
                 </ul>
             </nav>
         </header>

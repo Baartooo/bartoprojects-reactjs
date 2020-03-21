@@ -5,6 +5,7 @@ import NavigationBar from './components/CommonComponents/NavigationBar/Navigatio
 import DropdownNav from './components/CommonComponents/DropdownNav/DropdownNav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Album from './components/AlbumPage/Album';
+import routes from './router/routes';
 
 
 
@@ -32,10 +33,10 @@ class App extends Component {
           <NavigationBar dropdownClickHandler={this.dropdownToggleClickHandler} />
           <DropdownNav isOpened={this.state.isDropdownOpened} closeDropdown={this.closeDropdown}/>
           <Switch>
-            <Route path='/' exact component={StartPage} />
-            <Route path='/outdoor' exact component={Album} />
-            <Route path='/urban' exact component={Album} />
-            <Route path='/people' exact component={Album} />
+            <Route path={routes.start} exact component={StartPage} />
+            <Route path={routes.outdoor} exact component={Album} />
+            <Route path={routes.urban} exact component={Album} />
+            <Route path={routes.people} exact component={Album} />
           </Switch>
         </div>
       </Router>
