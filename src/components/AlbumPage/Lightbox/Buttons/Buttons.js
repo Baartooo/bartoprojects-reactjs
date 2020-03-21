@@ -1,29 +1,28 @@
 import React from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { IoIosClose } from 'react-icons/io';
+import { IoIosClose, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import './Buttons.css'
 
 const LeftArrow = (props) => {
     return (
-        <button className='arrow left' onClick={props.onClick}>
-            <FaArrowLeft />
-        </button>
+        <div className='arrow left button' onClick={props.onClick}>
+            <IoIosArrowBack />
+        </div>
     )
 }
 
 const RightArrow = (props) => {
     return (
-        <button className='arrow right' onClick={props.onClick}>
-            <FaArrowRight />
-        </button>
+        <div className='arrow right button' onClick={props.onClick}>
+            <IoIosArrowForward />
+        </div>
     )
 }
 
 const CloseX = (props) => {
     return (
-        <button className='close-x' onClick={props.onClick}>
+        <div className='close-x button' onClick={props.onClick}>
             <IoIosClose />
-        </button>
+        </div>
     )
 }
 

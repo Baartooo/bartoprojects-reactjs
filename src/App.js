@@ -19,18 +19,23 @@ class App extends Component {
       return { isDropdownOpened: !prevState.isDropdownOpened };
     });
   };
+  closeDropdown = () => {
+    this.setState(() => {
+      return { isDropdownOpened: false }
+    })
+  }
 
   render() {
     return (
       <Router>
         <div className='app'>
           <NavigationBar dropdownClickHandler={this.dropdownToggleClickHandler} />
-          <DropdownNav isOpened={this.state.isDropdownOpened} />
+          <DropdownNav isOpened={this.state.isDropdownOpened} closeDropdown={this.closeDropdown}/>
           <Switch>
             <Route path='/' exact component={StartPage} />
             <Route path='/outdoor' exact component={Album} />
             <Route path='/urban' exact component={Album} />
-            <Route path='/people' exact component={StartPage} />
+            <Route path='/people' exact component={Album} />
           </Switch>
         </div>
       </Router>

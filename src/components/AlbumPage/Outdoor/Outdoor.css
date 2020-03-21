@@ -12,11 +12,21 @@
     justify-content: center;
 }
 .single-photo{
-    width: 300px;
+    width: 30%;
     margin: 0 .75rem .75rem .75rem;
 }
 .single-img{
     width: 100%;
     height: auto;
     cursor: pointer;
+}
+@media(max-width: 768px){
+    .single-photo{
+        margin: 0 .5rem .5rem .5rem;
+    }
+}
+@media(max-width: 576px){
+    .single-photo{
+        width: 70%;
+    }
 }
