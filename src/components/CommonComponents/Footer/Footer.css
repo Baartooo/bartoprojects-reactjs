@@ -1,0 +1,29 @@
+.footerWrapper{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.instagram{
+    height: 1rem;
+    width: 8rem;
+    display: flex;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}

@@ -10,3 +10,6 @@
     margin: 0;
     padding: 0;
 }  
+.push{
+    min-height: calc(100vh - 50px) !important;
+}

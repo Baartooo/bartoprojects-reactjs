@@ -12,6 +12,7 @@ const StartPage = (props) => {
                 src={backgroundImage}
                 alt='background'
             />
+            <div className='push'></div>
         </main>
     );
 }
