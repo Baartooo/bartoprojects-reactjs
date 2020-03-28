@@ -67,14 +67,9 @@
     }
     .dropDownToggleButtonDiv{
         display: flex;
-        margin-right: 3rem;
+        margin-right: 1rem;
     }
-}
-@media(max-width: 360px){
     .navbar-logo{
         margin-left: 1rem;
-    }
-    .dropDownToggleButtonDiv{
-        margin-right: 1rem;
     }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import './Footer.css';
 
-const instagramLink='https://www.instagram.com/bartoprojects/';
+const instagramLink = 'https://www.instagram.com/bartoprojects/';
+const facebookLink = 'https://www.facebook.com/bartoprojects';
 
 const Footer = (props) => {
 
@@ -11,8 +12,12 @@ const Footer = (props) => {
         <footer className='footerWrapper'>
             <div className='footer'>
                 <a className='instagram' href={instagramLink} target='blank'>
-                    <FaInstagram /><span>@bartoprojects</span>
+                    <FaInstagram />
                 </a>
+                <a className='facebook' href={facebookLink} target='blank'>
+                    <FaFacebook />
+                </a>
+
             </div>
 
         </footer>
