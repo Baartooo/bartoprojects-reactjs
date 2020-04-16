@@ -1,15 +1,16 @@
 import React from 'react';
 
 import './Outdoor.css';
-import CampingPhoto from '../../../photos/outdoor/camping.jpg';
-import LonelyTreePhoto from '../../../photos/outdoor/lonelyTree.jpg';
-import CastlePhoto from '../../../photos/outdoor/castle.jpg';
-import FieldPhoto from '../../../photos/outdoor/field.jpg';
-import ChurchPhoto from '../../../photos/outdoor/fallChurch.jpg';
-import RoadPhoto from '../../../photos/outdoor/fallRoad.jpg';
+import CampingPhoto from '../../../assets/photos/outdoor/camping.jpg';
+import LonelyTreePhoto from '../../../assets/photos/outdoor/lonelyTree.jpg';
+import CastlePhoto from '../../../assets/photos/outdoor/castle.jpg';
+import MountainsView from '../../../assets/photos/outdoor/mountainsView.jpg';
+import Mountains from '../../../assets/photos/outdoor/mountains.jpg';
+import MountainsPath from '../../../assets/photos/outdoor/mountainsPath.jpg';
+
 import Album from '../Album/Album';
 
-const images = [ChurchPhoto, RoadPhoto, FieldPhoto, CampingPhoto, LonelyTreePhoto, CastlePhoto];
+const images = [CampingPhoto, LonelyTreePhoto, CastlePhoto, MountainsView, Mountains, MountainsPath];
 
 const Outdoor = (props) => {
     return (

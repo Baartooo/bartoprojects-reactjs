@@ -2,12 +2,12 @@ import React from 'react';
 
 import './Analog.css';
 import Album from '../Album/Album';
-import BmxPhoto from '../../../photos/analog/bmx.jpg';
-import GraffittiPhoto from '../../../photos/analog/graffitti.JPG';
-import ParkingPhoto from '../../../photos/analog/parking.jpg';
-import DodgePhoto from '../../../photos/analog/dodge.jpg';
-import RailsPhoto from '../../../photos/analog/rails.jpg';
-import TramPhoto from '../../../photos/analog/tram.jpg';
+import BmxPhoto from '../../../assets/photos/analog/bmx.jpg';
+import GraffittiPhoto from '../../../assets/photos/analog/graffitti.JPG';
+import ParkingPhoto from '../../../assets/photos/analog/parking.jpg';
+import DodgePhoto from '../../../assets/photos/analog/dodge.jpg';
+import RailsPhoto from '../../../assets/photos/analog/rails.jpg';
+import TramPhoto from '../../../assets/photos/analog/tram.jpg';
 
 const images = [BmxPhoto, GraffittiPhoto, ParkingPhoto, DodgePhoto, RailsPhoto, TramPhoto];
 

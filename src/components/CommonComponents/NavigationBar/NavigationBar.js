@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import DropdownToggleButton from '../DropdownNav/DropdownToggleButton';
-import Logo from '../../../photos/logo.png';
+import Logo from '../../../assets/photos/logo.png';
 import routes from '../../../router/routes';
 
 import './NavigationBar.css';
