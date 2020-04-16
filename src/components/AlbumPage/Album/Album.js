@@ -27,7 +27,7 @@ const Album = (props) => {
 
     }
     return (
-        <>
+        <div>
             <Lightbox />
             <div className='photos'>
                 {images.map((photo, index) => (
@@ -36,7 +36,7 @@ const Album = (props) => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 
