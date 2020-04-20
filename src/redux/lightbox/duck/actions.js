@@ -1,32 +1,32 @@
 import types from './types';
 
-const openLightbox = () => ({
+export const openLightbox = () => ({
     type: types.OPEN_LIGHTBOX
 });
-const closeLightbox = () => ({
+export const closeLightbox = () => ({
     type: types.CLOSE_LIGHTBOX
 });
-const setCurrentImagesArray = (currentArray) => ({
+export const setCurrentImagesArray = (currentArray) => ({
     type: types.SET_CURR_IMG_ARRAY,
     currentArray
 });
-const setCurrentImage = (currentImage) => ({
+export const setCurrentImage = (currentImage) => ({
     type: types.SET_CURR_IMG,
     currentImage
 });
-const allowNext = () => ({
+export const allowNext = () => ({
     type: types.ALLOW_NEXT
 });
-const denyNext = () => ({
+export const denyNext = () => ({
     type: types.DENY_NEXT
 });
-const allowPrev = () => ({
+export const allowPrev = () => ({
     type: types.ALLOW_PREV
 });
-const denyPrev = () => ({
+export const denyPrev = () => ({
     type: types.DENY_PREV
 });
-const resetIndex = () => ({
+export const resetIndex = () => ({
     type: types.RESET_INDEX
 });
 
