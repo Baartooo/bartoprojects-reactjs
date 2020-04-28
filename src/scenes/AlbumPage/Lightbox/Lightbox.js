@@ -9,7 +9,7 @@ import {
     denyPrev,
     resetIndex
 
-} from '../../../redux/lightbox/duck/actions';
+} from '../../../actions/actions';
 import './Lightbox.css';
 import { LeftArrow, RightArrow, CloseX } from './Buttons/Buttons';
 

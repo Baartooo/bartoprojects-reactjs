@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import './DropdownNav.css';
-import routes from '../../../router/routes';
+import routes from '../../router/routes';
 
 
 const DropdownNav = (props) => {

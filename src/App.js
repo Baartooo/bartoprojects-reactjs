@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import StartPage from './components/StartPage/StartPage';
-import NavigationBar from './components/CommonComponents/NavigationBar/NavigationBar';
-import DropdownNav from './components/CommonComponents/DropdownNav/DropdownNav';
+import StartPage from './scenes/StartPage/StartPage';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import DropdownNav from './components/DropdownNav/DropdownNav';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './router/routes';
-import Outdoor from './components/AlbumPage/Outdoor/Outdoor';
-import Urban from './components/AlbumPage/Urban/Urban';
-import People from './components/AlbumPage/People/People';
-import Analog from './components/AlbumPage/Analog/Analog';
-import Footer from './components/CommonComponents/Footer/Footer';
+import Outdoor from './scenes/AlbumPage/Outdoor/Outdoor';
+import Urban from './scenes/AlbumPage/Urban/Urban';
+import People from './scenes/AlbumPage/People/People';
+import Analog from './scenes/AlbumPage/Analog/Analog';
+import About from './scenes/About/About';
 
 
 
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path={routes.urban} exact component={Urban} />
             <Route path={routes.people} exact component={People} />
             <Route path={routes.analog} exact component={Analog} />
+            <Route path={routes.about} exact component={About} />
           </Switch>
           <Footer />
         </div>

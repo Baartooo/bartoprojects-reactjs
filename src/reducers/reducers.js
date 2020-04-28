@@ -1,4 +1,4 @@
-import types from './types';
+import types from '../actions/types/types';
 
 const INITIAL_LIGHTBOX_STATE = {
     isLightboxOpened: false,

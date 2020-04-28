@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Lightbox from '../Lightbox/Lightbox';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -10,7 +9,7 @@ import {
     denyNext,
     allowPrev,
     denyPrev,
-} from '../../../redux/lightbox/duck/actions';
+} from '../../../actions/actions';
 import './Album.css';
 
 const Album = (props) => {

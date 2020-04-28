@@ -1,4 +1,4 @@
-import types from './types';
+import types from './types/types';
 
 export const openLightbox = () => ({
     type: types.OPEN_LIGHTBOX
@@ -29,16 +29,3 @@ export const denyPrev = () => ({
 export const resetIndex = () => ({
     type: types.RESET_INDEX
 });
-
-
-export default {
-    openLightbox,
-    closeLightbox,
-    setCurrentImagesArray,
-    setCurrentImage,
-    allowNext,
-    denyNext,
-    allowPrev,
-    denyPrev,
-    resetIndex
-}
