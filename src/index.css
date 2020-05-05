@@ -12,8 +12,9 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lato', sans-serif;
-  background-color: #474d55;
+  /* font-family: 'Lato', sans-serif; */
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background-color: #34383d;
   /* overflow-x: hidden;  */
 }
 

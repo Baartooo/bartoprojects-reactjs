@@ -1,9 +1,12 @@
 import React from 'react';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import './Footer.css';
+import {
+    instagramLink,
+    facebookLink
+} from '../../constans/Links/links';
 
-const instagramLink = 'https://www.instagram.com/bartoprojects/';
-const facebookLink = 'https://www.facebook.com/bartoprojects';
+
 
 const Footer = (props) => {
 

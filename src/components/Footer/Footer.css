@@ -30,3 +30,9 @@
     color: #fffdfd;
     transition: 100ms;
 }
+
+@media(max-width: 690px){
+    .footer{
+        padding-right: 1rem;
+    }
+}

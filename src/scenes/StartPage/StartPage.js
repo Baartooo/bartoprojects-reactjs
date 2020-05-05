@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './StartPage.css';
-import backgroundImage from '../../assets/photos/startPageBackground.jpg'
+import backgroundImage from '../../assets/img/startPageBackground.jpg'
 
 
 const StartPage = (props) => {
