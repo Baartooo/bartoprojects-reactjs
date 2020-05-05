@@ -13,10 +13,11 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    padding-right: 3rem;
 }
 .footer a{
     display: flex;
-    margin-right: .8rem;
+    margin-left: .8rem;
     margin-bottom: 1rem;
     align-items: flex-end;
     justify-content: space-between;

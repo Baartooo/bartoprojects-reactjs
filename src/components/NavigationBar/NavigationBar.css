@@ -29,9 +29,6 @@
     width: 100%;
     height: auto;
 }
-.navbar-spacer{
-    /* flex-grow: 1; */
-}
 .navbar-navigation-items{
     margin-right: 3rem;
 }
