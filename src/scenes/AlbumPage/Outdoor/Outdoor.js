@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Outdoor.css';
+import '../Album/Album.css';
 import CampingPhoto from '../../../assets/photos/outdoor/camping.jpg';
 import LonelyTreePhoto from '../../../assets/photos/outdoor/lonelyTree.jpg';
 import CastlePhoto from '../../../assets/photos/outdoor/castle.jpg';

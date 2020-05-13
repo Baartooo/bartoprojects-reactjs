@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Analog.css';
+import '../Album/Album.css';
 import Album from '../Album/Album';
 import BmxPhoto from '../../../assets/photos/analog/bmx.jpg';
 import GraffittiPhoto from '../../../assets/photos/analog/graffitti.JPG';

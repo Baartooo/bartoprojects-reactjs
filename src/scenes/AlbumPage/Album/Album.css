@@ -5,6 +5,14 @@
     justify-content: center;
     margin-bottom: 1rem;
 }
+.album-wrapper{
+    width: 95%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto 0 auto;
+    overflow-x: hidden;
+}
 .photos{
     width: 100%;
     display: flex;
