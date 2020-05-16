@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     touch-action: none;
+    animation: transitionIn 0.2s;
 }
 .lightbox-background{
     width: 100%;

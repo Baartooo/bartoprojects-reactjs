@@ -1,5 +1,7 @@
 .startPageWrapper{
     width: 100%;
+    animation: transitionIn 0.75s;
+
 }
 .background-image{
     width: 100%;

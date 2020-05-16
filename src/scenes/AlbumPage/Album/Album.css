@@ -1,10 +1,4 @@
-.album-header{
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
+
 .album-wrapper{
     width: 95%;
     background: transparent;
@@ -12,6 +6,8 @@
     flex-direction: column;
     margin: 6rem auto 0 auto;
     overflow-x: hidden;
+    animation: transitionIn 0.75s;
+
 }
 .photos{
     width: 100%;
@@ -27,6 +23,7 @@
     width: 100%;
     height: auto;
     cursor: pointer;
+    animation: transitionIn 0.75s;
 }
 @media(max-width: 768px){
 
