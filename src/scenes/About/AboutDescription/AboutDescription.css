@@ -1,0 +1,40 @@
+.about-description-wrapper{
+    max-width: 40rem;
+    margin-left: 5rem;
+    color: white;
+}
+.about-description-wrapper h1{
+    letter-spacing: .04rem;
+    font-size: 3rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.about-description-wrapper h2{
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    font-size: .8rem;
+    margin-block-start: 0;
+}
+.about-description-wrapper p{
+    font-size: 1.3rem;
+    margin-bottom: .7rem;
+}
+
+
+@media(max-width: 1200px){
+    .about-description-wrapper{
+        margin: 0;
+    }
+}
+@media(max-width: 576px){
+    .about-description-wrapper h1{
+        font-size: 2rem;
+    }
+    .about-description-wrapper h2{
+        font-size: .6rem;
+    }
+    .about-description-wrapper p{
+        font-size: .86rem;
+    }
+
+}
