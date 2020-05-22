@@ -2,14 +2,11 @@ import React from 'react';
 import './AboutDescription.css';
 import { instagramLink, facebookLink } from '../../../constans/Links/links';
 
-
-
 const AboutDescription = props => {
     return (
         <div className='about-description-wrapper'>
             <h1>Bartosz Gajos</h1>
             <h2>Katowice, Polska</h2>
-            
             <p>
                 Pasjonuję sie fotografią cyfrową i analogową!
             </p>
@@ -22,22 +19,14 @@ const AboutDescription = props => {
                 Staram się przełamać barierę pomiędzy spokojną naturą, a ruchliwymi metropoliami. Najświeższe zdjęcia 
                 znajdziesz na moich regularnie aktualizowanych kontach 
                 <a className='about-description-link' href={instagramLink} target='blank'>instagram</a> 
-                oraz 
+                oraz
                 facebook.
             </p>
             <p>
                 Jestem otwarty na propozycje nowych projektów, 
             </p>
-
-
-
-
-
-
         </div>
-    )
-}
-
-
+    );
+};
 
 export default AboutDescription;
