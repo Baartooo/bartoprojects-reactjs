@@ -23,8 +23,15 @@
     width: 100%;
     height: auto;
     cursor: pointer;
-    animation: transitionIn 0.75s;
 }
+.img-visible{
+    opacity: 1;
+    animation: transitionIn 1s;
+}
+.img-hidden{
+    opacity: 0;
+}
+
 @media(max-width: 768px){
 
 }

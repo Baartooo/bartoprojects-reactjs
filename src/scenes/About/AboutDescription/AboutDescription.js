@@ -1,28 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AboutDescription.css';
 import { instagramLink, facebookLink } from '../../../constans/Links/links';
+import descriptionPL from './Description/pl.json';
+import descriptionEN from './Description/en.json';
+
+const lang = {
+    pl: 'pl',
+    en: 'en'
+}
 
 const AboutDescription = props => {
+    const [language, setLanguage] = useState(lang.en)
+
+    let description;
+
+    switch (language) {
+        case lang.pl:
+            description = descriptionPL;
+            break;
+        case lang.en:
+            description = descriptionEN;
+            break;
+    }
+
     return (
         <div className='about-description-wrapper'>
             <h1>Bartosz Gajos</h1>
-            <h2>Katowice, Polska</h2>
+            <h2>{description.localization}</h2>
             <p>
-                Pasjonuję sie fotografią cyfrową i analogową!
+                {description.firstParagraph}
             </p>
             <p>
-                To co najbardziej w niej kocham to możliwość pokazania innym w jaki sposób Ty widzisz otaczający Cię świat. 
-                Przyjemność sprawiają mi nie tylko efekty, ale cały proces tworzenia.
+                {description.secondParagraph}
             </p>
             <p>
-                W moich pracach skupiam się głównie na krajobrazach, sportach, miastach i lifestyle. 
-                Staram się przełamać barierę pomiędzy spokojną naturą, a ruchliwymi metropoliami. Najświeższe zdjęcia 
-                znajdziesz na moich regularnie aktualizowanych kontach&nbsp;
-                <a className='about-description-link' href={instagramLink} target='blank'>instagram</a>&nbsp;oraz&nbsp;
+                {description.thirdParagraph}&nbsp;
+                <a className='about-description-link' href={instagramLink} target='blank'>instagram</a>&nbsp;{description.and}&nbsp;
                 <a className='about-description-link' href={facebookLink} target='blank'>facebook.</a>&nbsp;
             </p>
             <p>
-                Jestem otwarty na propozycje współpracy przy nowych interesujących projektach.
+                {description.fourthParagraph}
             </p>
         </div>
     );

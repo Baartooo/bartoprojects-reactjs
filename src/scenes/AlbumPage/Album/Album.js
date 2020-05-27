@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Lightbox from '../Lightbox/Lightbox';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -13,6 +13,9 @@ import {
 import './Album.css';
 
 const Album = (props) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+
     const dispatch = useDispatch();
     const isLightboxOpened = useSelector(state => state.lightbox.isLightboxOpened)
 
@@ -37,8 +40,15 @@ const Album = (props) => {
             {isLightboxOpened ? <Lightbox /> : ''}
             <div className='photos'>
                 {props.images.map((photo, index) => (
-                    <div key={index} className='single-photo' onClick={() => onPhotoClick(index)}>
-                        <img src={photo} className='single-img' alt=''></img>
+                    <div key={index}
+                        className='single-photo'
+                        onClick={() => onPhotoClick(index)}>
+
+                        <img src={photo}
+                            className={`single-img img-${imageLoaded ? 'visible' : 'hidden'}`}
+                            alt=''
+                            onLoad={() => setImageLoaded(true)}
+                        />
                     </div>
                 ))}
             </div>
