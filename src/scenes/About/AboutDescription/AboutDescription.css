@@ -19,7 +19,15 @@
     font-size: 1.3rem;
     margin-bottom: .7rem;
 }
-
+.about-description-link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.about-description-link:hover{
+    text-decoration: underline;
+    text-underline-position: below;
+}
 
 @media(max-width: 1200px){
     .about-description-wrapper{

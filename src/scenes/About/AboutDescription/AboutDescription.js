@@ -17,13 +17,12 @@ const AboutDescription = props => {
             <p>
                 W moich pracach skupiam się głównie na krajobrazach, sportach, miastach i lifestyle. 
                 Staram się przełamać barierę pomiędzy spokojną naturą, a ruchliwymi metropoliami. Najświeższe zdjęcia 
-                znajdziesz na moich regularnie aktualizowanych kontach 
-                <a className='about-description-link' href={instagramLink} target='blank'>instagram</a> 
-                oraz
-                facebook.
+                znajdziesz na moich regularnie aktualizowanych kontach&nbsp;
+                <a className='about-description-link' href={instagramLink} target='blank'>instagram</a>&nbsp;oraz&nbsp;
+                <a className='about-description-link' href={facebookLink} target='blank'>facebook.</a>&nbsp;
             </p>
             <p>
-                Jestem otwarty na propozycje nowych projektów, 
+                Jestem otwarty na propozycje współpracy przy nowych interesujących projektach.
             </p>
         </div>
     );
