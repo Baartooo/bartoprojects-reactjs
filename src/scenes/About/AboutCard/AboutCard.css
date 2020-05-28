@@ -11,6 +11,13 @@
     height: auto;
     margin-bottom: 2rem;
 }
+.img-visible{
+    opacity: 1;
+    animation: transitionIn 1s;
+}
+.img-hidden{
+    opacity: 0;
+}
 .about-card-title{
     color: #a3a3a3;
     font-size: .7rem;
