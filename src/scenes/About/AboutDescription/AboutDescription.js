@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './AboutDescription.css';
 import { instagramLink, facebookLink } from '../../../constans/Links/links';
-import descriptionPL from './Description/pl.json';
+import Flag from 'react-world-flags';
 import descriptionEN from './Description/en.json';
+import descriptionPL from './Description/pl.json';
+import PlFlag from '../../../assets/img/poland.svg';
+import EnFlag from '../../../assets/img/united-kingdom.svg';
 
 const lang = {
     pl: 'pl',
@@ -10,7 +13,7 @@ const lang = {
 }
 
 const AboutDescription = props => {
-    const [language, setLanguage] = useState(lang.en)
+    const [language, setLanguage] = useState(lang.pl)
 
     let description;
 
@@ -22,11 +25,28 @@ const AboutDescription = props => {
             description = descriptionEN;
             break;
     }
-
+    const switchDescriptionLanguage = (language) => {
+        if (language === lang.pl || language === lang.en)
+            setLanguage(language);
+    }
     return (
         <div className='about-description-wrapper'>
             <h1>Bartosz Gajos</h1>
             <h2>{description.localization}</h2>
+            <div className='about-lang-picker'>
+                <img
+                    src={PlFlag}
+                    className={`flag ${(language === lang.pl) ? 'active-flag' : ''}`}
+                    onClick={() => switchDescriptionLanguage(lang.pl)}
+                />
+                <img
+                    src={EnFlag}
+                    className={`flag ${(language === lang.en) ? 'active-flag' : ''}`}
+                    onClick={() => switchDescriptionLanguage(lang.en)}
+
+                />
+            </div>
+
             <p>
                 {description.firstParagraph}
             </p>

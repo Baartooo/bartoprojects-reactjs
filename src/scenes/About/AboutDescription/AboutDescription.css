@@ -8,12 +8,31 @@
     font-size: 3rem;
     margin-block-start: 0;
     margin-block-end: 0;
+    transition: .3s;
 }
 .about-description-wrapper h2{
     margin-bottom: 1.5rem;
     font-weight: normal;
     font-size: .8rem;
     margin-block-start: 0;
+    transition: .3s;
+}
+.about-lang-picker{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.flag{
+    width: 1.2rem;
+    height: auto;  
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%);
+}
+.flag.active-flag, .flag:hover{
+    transform: scale(1.3);
 }
 .about-description-wrapper p{
     font-size: 1.3rem;
@@ -43,6 +62,10 @@
     }
     .about-description-wrapper p{
         font-size: .86rem;
+    }
+    .flag{
+        width: .8rem;
+        margin-right: .33rem;
     }
 
 }
