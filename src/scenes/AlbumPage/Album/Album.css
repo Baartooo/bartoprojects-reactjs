@@ -18,6 +18,7 @@
 .single-photo{
     width: 30%;
     margin: 0 1% 2% 1%;
+    transition: 300ms;
 }
 .single-img{
     width: 100%;

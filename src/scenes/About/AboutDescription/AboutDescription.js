@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './AboutDescription.css';
 import { instagramLink, facebookLink } from '../../../constans/Links/links';
-import Flag from 'react-world-flags';
 import descriptionEN from './Description/en.json';
 import descriptionPL from './Description/pl.json';
 import PlFlag from '../../../assets/img/poland.svg';
@@ -24,6 +23,8 @@ const AboutDescription = props => {
         case lang.en:
             description = descriptionEN;
             break;
+        default:
+            break;
     }
     const switchDescriptionLanguage = (language) => {
         if (language === lang.pl || language === lang.en)
@@ -38,12 +39,13 @@ const AboutDescription = props => {
                     src={PlFlag}
                     className={`flag ${(language === lang.pl) ? 'active-flag' : ''}`}
                     onClick={() => switchDescriptionLanguage(lang.pl)}
+                    alt='pl-flag'
                 />
                 <img
                     src={EnFlag}
                     className={`flag ${(language === lang.en) ? 'active-flag' : ''}`}
                     onClick={() => switchDescriptionLanguage(lang.en)}
-
+                    alt='en-flag'
                 />
             </div>
 
