@@ -16,7 +16,7 @@ const NavigationBar = (props) => {
                         <li><NavLink exact to={routes.start} activeClassName='active-navigation-link'>start.</NavLink></li>
                         <li><NavLink exact to={routes.outdoor} activeClassName='active-navigation-link'>outdoor.</NavLink></li>
                         <li><NavLink exact to={routes.urban} activeClassName='active-navigation-link'>urban.</NavLink></li>
-                        <li><NavLink exact to={routes.people} activeClassName='active-navigation-link'>people.</NavLink></li>
+                        <li><NavLink exact to={routes.sports} activeClassName='active-navigation-link'>sports.</NavLink></li>
                         <li><NavLink exact to={routes.analog} activeClassName='active-navigation-link'>analog.</NavLink></li>
                         <li><NavLink exact to={routes.about} activeClassName='active-navigation-link'>about.</NavLink></li>
                     </ul>

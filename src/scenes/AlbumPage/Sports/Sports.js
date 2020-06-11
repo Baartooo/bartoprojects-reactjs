@@ -5,7 +5,7 @@ import Album from '../Album/Album';
 
 const images=[];
 
-const Outdoor = (props) => {
+const Sports = (props) => {
     return (
         <main className='album-wrapper'>
 
@@ -14,4 +14,4 @@ const Outdoor = (props) => {
     );
 }
 
-export default Outdoor;
+export default Sports;

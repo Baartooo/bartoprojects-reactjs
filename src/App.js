@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './router/routes';
 import Outdoor from './scenes/AlbumPage/Outdoor/Outdoor';
 import Urban from './scenes/AlbumPage/Urban/Urban';
-import People from './scenes/AlbumPage/People/People';
+import Sports from './scenes/AlbumPage/Sports/Sports';
 import Analog from './scenes/AlbumPage/Analog/Analog';
 import About from './scenes/About/About';
 
@@ -41,7 +41,7 @@ class App extends Component {
             <Route path={routes.start} exact component={StartPage} />
             <Route path={routes.outdoor} exact component={Outdoor} />
             <Route path={routes.urban} exact component={Urban} />
-            <Route path={routes.people} exact component={People} />
+            <Route path={routes.sports} exact component={Sports} />
             <Route path={routes.analog} exact component={Analog} />
             <Route path={routes.about} exact component={About} />
           </Switch>

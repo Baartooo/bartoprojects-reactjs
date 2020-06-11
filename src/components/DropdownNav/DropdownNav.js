@@ -17,7 +17,7 @@ const DropdownNav = (props) => {
                     <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.start}>start.</NavLink></li>
                     <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.outdoor}>outdoor.</NavLink></li>
                     <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.urban}>urban.</NavLink></li>
-                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.people}>people.</NavLink></li>
+                    <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.sports}>sports.</NavLink></li>
                     <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.analog}>analog.</NavLink></li>
                     <li><NavLink onClick={props.closeDropdown} exact activeClassName='active-nagivation-link' to={routes.about}>about.</NavLink></li>
                 </ul>

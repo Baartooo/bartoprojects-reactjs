@@ -2,7 +2,7 @@ const routes = {
     start: '/',
     outdoor: '/outdoor',
     urban: '/urban',
-    people: '/people',
+    sports: '/sports',
     analog: '/analog',
     about: '/about'
 }

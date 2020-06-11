@@ -30,7 +30,7 @@ const images = [
     Opel
 ];
 
-const Outdoor = (props) => {
+const Analog = (props) => {
     return (
         <main className='album-wrapper'>
             <Album images={images} />
@@ -40,4 +40,4 @@ const Outdoor = (props) => {
     );
 }
 
-export default Outdoor;
+export default Analog;
