@@ -16,28 +16,24 @@ import RailsPhoto from '../../../assets/photos/analog/rails.jpg';
 import Opel from '../../../assets/photos/analog/opel.jpg';
 
 const images = [
-    Tunnel,
-    BmxPhoto,
-    ParkingPhoto,
-    DodgePhoto,
-    ShadowPeople,
-    Anna,
-    BushWhite,
-    BushYellow,
-    BushSunset,
-    TramPhoto,
-    RailsPhoto,
-    Opel
+  Tunnel,
+  BmxPhoto,
+  ParkingPhoto,
+  DodgePhoto,
+  ShadowPeople,
+  Anna,
+  BushWhite,
+  BushYellow,
+  BushSunset,
+  TramPhoto,
+  RailsPhoto,
+  Opel,
 ];
 
-const Analog = (props) => {
-    return (
-        <main className='album-wrapper'>
-            <Album images={images} />
-
-
-        </main>
-    );
-}
+const Analog = () => (
+  <main className="album-wrapper">
+    <Album images={images} />
+  </main>
+);
 
 export default Analog;
