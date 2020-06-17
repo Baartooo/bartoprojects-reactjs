@@ -9,7 +9,6 @@ const StartPage = () => (
       src={backgroundImage}
       alt="background"
     />
-    <div className="push"></div>
   </main>
 );
 
