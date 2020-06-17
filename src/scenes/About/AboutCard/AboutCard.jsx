@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AboutCard.css';
-import Thumbnail from '../../../assets/img/aboutThumbnail.jpg';
+import Thumbnail from '../../../assets/img/aboutThumbnail2.jpg';
 import { instagramLink, facebookLink } from '../../../constans/Links/links';
 
 const AboutCard = () => {

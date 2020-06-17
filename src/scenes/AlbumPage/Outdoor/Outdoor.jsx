@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Album/Album.css';
+import Album from '../Album/Album';
 
 import CampingPhoto from '../../../assets/photos/outdoor/camping.jpg';
 import LonelyTreePhoto from '../../../assets/photos/outdoor/lonelyTree.jpg';
@@ -10,8 +11,6 @@ import MountainsPath from '../../../assets/photos/outdoor/mountainsPath.jpg';
 import MorningFogGlow from '../../../assets/photos/outdoor/morningFogGlow.jpg';
 import MorningFogCentralTree from '../../../assets/photos/outdoor/morningFogCentralTree.jpg';
 import MorningFog from '../../../assets/photos/outdoor/morningFog.jpg';
-
-import Album from '../Album/Album';
 
 const images = [
   CampingPhoto,
