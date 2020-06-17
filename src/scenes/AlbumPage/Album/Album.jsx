@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Lightbox from '../Lightbox/Lightbox';
+import Image from './Image/Image';
 import {
   openLightbox,
   setCurrentImage,
@@ -13,7 +14,6 @@ import {
 import './Album.css';
 
 const Album = (props) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
   const { images } = props;
 
   const dispatch = useDispatch();
@@ -38,18 +38,13 @@ const Album = (props) => {
     <div>
       {isLightboxOpened ? <Lightbox /> : ''}
       <div className="photos">
-        {images.map((photo, index) => (
+        {images.map((photoSource, index) => (
           <div
             key={index}
             className='single-photo'
             onClick={() => onPhotoClick(index)}
             onKeyPress={() => onPhotoClick(index)}>
-            <img
-              src={photo}
-              className={`single-img img-${imageLoaded ? 'visible' : 'hidden'}`}
-              alt=""
-              onLoad={() => setImageLoaded(true)}
-            />
+            <Image source={photoSource} />
           </div>
         ))}
       </div>
