@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './DropdownNav.css';
+import PropTypes from 'prop-types';
 import routes from '../../router/routes';
 
 const DropdownNav = (props) => {
-
-  const { isOpened, closeDropdown} = props;
+  const { isOpened, closeDropdown } = props;
   return (
     <header>
       <nav className={`${isOpened ? 'dropdown-navigation opened' : 'dropdown-navigation'}`}>
@@ -20,6 +20,11 @@ const DropdownNav = (props) => {
       </nav>
     </header>
   );
+};
+
+DropdownNav.propTypes = {
+  isOpened: PropTypes.bool.isRequired,
+  closeDropdown: PropTypes.func.isRequired,
 };
 
 export default DropdownNav;

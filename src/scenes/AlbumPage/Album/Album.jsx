@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Lightbox from '../Lightbox/Lightbox';
+import PropTypes from 'prop-types';
 import Image from './Image/Image';
 import {
   openLightbox,
@@ -50,6 +51,10 @@ const Album = (props) => {
       </div>
     </div>
   );
+};
+
+Album.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Album;

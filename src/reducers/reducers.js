@@ -5,7 +5,7 @@ const INITIAL_LIGHTBOX_STATE = {
     currentImageArray: undefined,
     currentImage: undefined,
     isOnFirst: false,
-    isOnLast: false
+    isOnLast: false,
 }
 
 const lightboxReducer = (state = INITIAL_LIGHTBOX_STATE, action) => {

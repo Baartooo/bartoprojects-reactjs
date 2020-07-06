@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import DropdownToggleButton from '../DropdownNav/DropdownToggleButton';
 import Logo from '../../assets/img/logo.png';
 import routes from '../../router/routes';
@@ -28,6 +29,10 @@ const NavigationBar = (props) => {
       </nav>
     </header>
   );
+};
+
+NavigationBar.propTypes = {
+  dropdownClickHandler: PropTypes.func.isRequired,
 };
 
 export default NavigationBar;
