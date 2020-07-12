@@ -1,27 +1,31 @@
 import React from 'react';
 import '../Album/Album.css';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
 import Album from '../Album/Album';
 
-import Building1 from '../../../assets/photos/urban/building1.jpg';
-import Chimney from '../../../assets/photos/urban/chimney.jpg';
-import Building2 from '../../../assets/photos/urban/building2.jpg';
-import Balconies from '../../../assets/photos/urban/balconies.jpg';
-import Cameras from '../../../assets/photos/urban/cameras.jpg';
-import Wall from '../../../assets/photos/urban/wall.jpg';
+const images = gql`
+  {
+    category(where:{name: "urban"}) {
+      name
+      images {
+        title, img{ url }, ordinalNumber, categoryName
+      }
+    }
+  }
+`;
 
-const images = [
-  Building1,
-  Chimney,
-  Building2,
-  Balconies,
-  Cameras,
-  Wall,
-];
+const Urban = () => {
+  const { loading, error, data } = useQuery(images);
 
-const Outdoor = () => (
-  <main className="album-wrapper">
-    <Album images={images} />
-  </main>
-);
+  return (
+    <main className="album-wrapper">
+      {loading
+        ? ''
+        : <Album images={data.category.images} />
+      }
+    </main>
+  );
+};
 
-export default Outdoor;
+export default Urban;

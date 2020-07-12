@@ -1,21 +1,31 @@
 import React from 'react';
 import '../Album/Album.css';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
 import Album from '../Album/Album';
 
-import Crooked from '../../../assets/photos/sports/maciekCrooked.jpg';
-import RailRide from '../../../assets/photos/sports/patrykRailride.jpg';
-import BluntStall1 from '../../../assets/photos/sports/bluntStall1.jpg';
+const images = gql`
+  {
+    category(where:{name: "sports"}) {
+      name
+      images {
+        title, img{ url }, ordinalNumber, categoryName
+      }
+    }
+  }
+`;
 
-const images = [
-  Crooked,
-  RailRide,
-  BluntStall1,
-];
+const Sports = () => {
+  const { loading, error, data } = useQuery(images);
 
-const Sports = () => (
-  <main className="album-wrapper">
-    <Album images={images} />
-  </main>
-);
+  return (
+    <main className="album-wrapper">
+      {loading
+        ? ''
+        : <Album images={data.category.images} />
+      }
+    </main>
+  );
+};
 
 export default Sports;
