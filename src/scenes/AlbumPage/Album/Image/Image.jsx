@@ -9,14 +9,14 @@ const override = css`
 
 const Image = (props) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { source } = props;
+  const { source, alt } = props;
 
   return (
     <>
       <img
         src={source}
         className={`single-img img-${imageLoaded ? 'visible' : 'hidden'}`}
-        alt=""
+        alt={alt}
         onLoad={() => setImageLoaded(true)}
       />
       <FadeLoader

@@ -48,7 +48,7 @@ const Album = (props) => {
             className='single-photo'
             onClick={() => onPhotoClick(index)}
             onKeyPress={() => onPhotoClick(index)}>
-            <Image source={image.img.url} />
+            <Image source={image.img.url} alt={image.title} />
           </div>
         ))}
       </div>
