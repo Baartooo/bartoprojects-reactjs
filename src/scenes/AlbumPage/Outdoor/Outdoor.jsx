@@ -1,5 +1,7 @@
 import React from 'react';
 import '../Album/Album.css';
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
 import Album from '../Album/Album';
 
 import CampingPhoto from '../../../assets/photos/outdoor/camping.jpg';
@@ -11,6 +13,17 @@ import MountainsPath from '../../../assets/photos/outdoor/mountainsPath.jpg';
 import MorningFogGlow from '../../../assets/photos/outdoor/morningFogGlow.jpg';
 import MorningFogCentralTree from '../../../assets/photos/outdoor/morningFogCentralTree.jpg';
 import MorningFog from '../../../assets/photos/outdoor/morningFog.jpg';
+
+const images2 = gql`
+  {
+    category(where:{name: "outdoor"}) {
+      name
+      images {
+        title, img{ url }
+      }
+    }
+  }
+`;
 
 const images = [
   CampingPhoto,
@@ -24,10 +37,21 @@ const images = [
   MorningFog,
 ];
 
-const Outdoor = () => (
-  <main className="album-wrapper">
-    <Album images={images} />
-  </main>
-);
+const Outdoor = () => {
+  const { loading, error, data } = useQuery(images2);
+
+  if (!loading) {
+    console.log(data.category.images);
+  }
+  //image.img.url
+  return (
+    <main className="album-wrapper">
+      {loading
+        ? ''
+        : <Album images={images} />
+      }
+    </main>
+  );
+};
 
 export default Outdoor;

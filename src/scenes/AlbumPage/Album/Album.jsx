@@ -53,8 +53,8 @@ const Album = (props) => {
   );
 };
 
-Album.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+// Album.propTypes = {
+//   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+// };
 
 export default Album;
