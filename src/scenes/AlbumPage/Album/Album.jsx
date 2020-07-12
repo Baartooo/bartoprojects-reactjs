@@ -16,6 +16,9 @@ import './Album.css';
 
 const Album = (props) => {
   const { images } = props;
+  const sortedImages = images.sort((img1, img2) => {
+    return img1.ordinalNumber - img2.ordinalNumber;
+  });
 
   const dispatch = useDispatch();
   const isLightboxOpened = useSelector((state) => state.lightbox.isLightboxOpened);
@@ -39,13 +42,13 @@ const Album = (props) => {
     <div>
       {isLightboxOpened ? <Lightbox /> : ''}
       <div className="photos">
-        {images.map((photoSource, index) => (
+        {sortedImages.map((image, index) => (
           <div
             key={index}
             className='single-photo'
             onClick={() => onPhotoClick(index)}
             onKeyPress={() => onPhotoClick(index)}>
-            <Image source={photoSource} />
+            <Image source={image.img.url} />
           </div>
         ))}
       </div>

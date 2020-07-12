@@ -75,7 +75,7 @@ const Lightbox = () => {
       {!isOnLast ? <RightArrow onClick={moveRight} /> : ''}
 
       <div className="lightbox-photo-wrapper">
-        <img src={currentImage} alt="img" className="lightbox-photo" />
+        <img src={currentImage.img.url} alt="img" className="lightbox-photo" />
       </div>
     </div>
   );

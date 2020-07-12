@@ -19,7 +19,7 @@ const images2 = gql`
     category(where:{name: "outdoor"}) {
       name
       images {
-        title, img{ url }
+        title, img{ url }, ordinalNumber, categoryName
       }
     }
   }
@@ -40,15 +40,15 @@ const images = [
 const Outdoor = () => {
   const { loading, error, data } = useQuery(images2);
 
-  if (!loading) {
-    console.log(data.category.images);
-  }
+  // if (!loading) {
+  //   console.log(data.category.images);
+  // }
   //image.img.url
   return (
     <main className="album-wrapper">
       {loading
         ? ''
-        : <Album images={images} />
+        : <Album images={data.category.images} />
       }
     </main>
   );
