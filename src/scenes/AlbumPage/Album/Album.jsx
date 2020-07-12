@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Lightbox from '../Lightbox/Lightbox';
 import PropTypes from 'prop-types';
+import Lightbox from '../Lightbox/Lightbox';
 import Image from './Image/Image';
 import {
   openLightbox,
