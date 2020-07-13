@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import Lightbox from '../Lightbox/Lightbox';
 import Image from './Image/Image';
+import NoPhotosInfo from '../../../components/NoPhotosInfo/NoPhotosInfo';
 import {
   openLightbox,
   setCurrentImage,
@@ -39,9 +39,16 @@ const Album = (props) => {
     }
   };
   return (
+
     <div>
       {isLightboxOpened ? <Lightbox /> : ''}
+      
       <div className="photos">
+        {
+          (images.length === 0)
+            ? <NoPhotosInfo />
+            : ''
+        }
         {sortedImages.map((image, index) => (
           <div
             key={index}
@@ -55,9 +62,4 @@ const Album = (props) => {
     </div>
   );
 };
-
-// Album.propTypes = {
-//   images: PropTypes.arrayOf(PropTypes.string).isRequired,
-// };
-
 export default Album;

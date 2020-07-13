@@ -1,0 +1,25 @@
+.noPhotosInfo-wrapper {
+  position: absolute;
+  top: 40vh;
+}
+.noPhotosInfo-wrapper p{
+  font-size: 1.5rem;
+  color: #dddddd;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+@media(max-width: 576px){
+  .noPhotosInfo-wrapper p{
+    font-size: 1rem;
+  }
+}
+@media(max-width: 400px){
+  .noPhotosInfo-wrapper p{
+    font-size: .8rem;
+    padding: 0 1rem;
+  }
+}
