@@ -4,15 +4,15 @@ import backgroundImage from '../../assets/img/startPageBackground.jpg';
 
 const StartPage = () => {
 
-  return (
-    <main className="startPageWrapper">
-      <img
-        className="background-image"
-        src={backgroundImage}
-        alt="background"
-      />
-    </main>
-  );
+    return (
+        <main className="startPageWrapper">
+            <img
+                className="background-image"
+                src={backgroundImage}
+                alt="background"
+            />
+        </main>
+    );
 };
 
 export default StartPage;
