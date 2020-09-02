@@ -12,6 +12,7 @@
     "cloudinary-core": "^2.10.2",
     "cloudinary-react": "^1.6.0",
     "graphql": "^15.3.0",
+    "gsap": "^3.5.1",
     "react": "^16.13.0",
     "react-country-flag": "^2.1.0",
     "react-dom": "^16.13.0",
@@ -33,9 +34,6 @@
     "test": "react-scripts test",
     "lint": "eslint src",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

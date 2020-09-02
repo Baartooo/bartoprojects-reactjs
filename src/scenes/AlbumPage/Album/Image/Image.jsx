@@ -1,32 +1,39 @@
-import React, { useState } from 'react';
-import { css } from '@emotion/core';
-import FadeLoader from 'react-spinners/FadeLoader';
+import React, {useEffect, useRef} from 'react';
+import gsap from 'gsap';
 
-const override = css`
-  display: block;
-  margin:  auto;
-`;
 
 const Image = (props) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const { source, alt } = props;
+    const {source, alt} = props;
+    const photo = useRef(null);
 
-  return (
-    <>
-      <img
-        src={source}
-        className={`single-img img-${imageLoaded ? 'visible' : 'hidden'}`}
-        alt={alt}
-        onLoad={() => setImageLoaded(true)}
-      />
-      <FadeLoader
-        css={override}
-        loading={!imageLoaded}
-        color="#c9c9c9"
-      />
+    const handleImageLoad = () => {
+        gsap.fromTo(photo.current, {
+            y: '-=20'
+        }, {
+            duration: .5,
+            opacity: 1,
+            y: 0,
+            ease: 'back',
+        })
+    }
 
-    </>
-  );
+    useEffect(() => {
+        gsap.set(photo.current, {opacity: 0});
+
+
+    }, []);
+
+    return (
+        <>
+            <img
+                ref={photo}
+                src={source}
+                className="single-img"
+                alt={alt}
+                onLoad={handleImageLoad}
+            />
+        </>
+    );
 };
 
 export default Image;
